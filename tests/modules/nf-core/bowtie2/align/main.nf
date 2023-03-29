@@ -57,6 +57,7 @@ workflow test_bowtie2_align_paired_end {
     sort = false
 
     BOWTIE2_BUILD ( fasta )
+    BOWTIE2_BUILD.out.view()
     BOWTIE2_ALIGN ( input, BOWTIE2_BUILD.out.index, save_unaligned, sort )
 }
 
